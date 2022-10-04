@@ -129,11 +129,37 @@
 	}
 
 	&__content {
+		overflow: hidden;
 		padding: 102px 0;
 		background-color: #2B2B2A;
-		// background-image: url(../images/main-img.svg);
-		// background-repeat: no-repeat;
-		// background-position: right;
+		background-image:
+			url(../images/vector5.svg),
+			url(../images/vector3.svg),
+			url(../images/vector1.svg),
+			url(../images/blur-line.svg),
+			url(../images/blur-desktop.svg),
+			url(../images/main-img.svg);
+		background-repeat: no-repeat;
+		background-position: 15% top, left bottom, top right, bottom right, center, right;
+
+		@media (max-width: 918px) {
+			padding: 168px 0 60px 0;
+			background-image:
+				url(../images/vector7.svg),
+				url(../images/vector6.svg),
+				url(../images/vector4.svg),
+				url(../images/vector2.svg),
+				url(../images/blur-mobile.svg),
+				url(../images/main-img-mobile.svg);
+			background-repeat: no-repeat;
+			background-position: left 728px, 80% 70%, right bottom, top right, top, top;
+			background-size: auto auto, auto auto, auto auto, auto auto, cover, cover;
+		}
+
+		@media (max-width: 581px) {
+			background-position: left 728px, 80% 368px, right bottom, top right, left -60px, top;
+			background-size: auto auto, auto auto, auto auto, auto auto, cover, contain;
+		}
 	}
 }
 
@@ -298,6 +324,7 @@
 }
 
 .content {
+	background: url(../images/vector5.svg) -100% top no-repeat;
 	&__tags {
 		margin: 0 0 66px 0;
 	}
@@ -319,12 +346,40 @@
 	}
 
 	&__title {
+		position: relative;
+		z-index: 1;
 		font-weight: 900;
 		font-size: 50px;
 		line-height: 120%;
 		color: #FFFFFF;
 
 		margin: 0 0 30px 0;
+
+		&::before {
+			content: 'КУРС';
+			position: absolute;
+			z-index: -1;
+			top: -150%;
+
+			font-weight: 900;
+			font-size: 130px;
+			line-height: 140%;
+			letter-spacing: 0.15em;
+			color: #3E3E3C;
+			text-align: center;
+
+			@media (max-width: 541px) {
+				top: -80%;
+			}
+
+			@media (max-width: 435px) {
+				left: -15px;
+			}
+
+			@media (max-width: 390px) {
+				left: -30px;
+			}
+		}
 	}
 
 	&__subtitles {
@@ -476,6 +531,14 @@
 		padding: 0 0 0 15px;
 		border-left: 1px solid #E0FF00;
 		height: max-content;
+
+		&:not(:last-child) {
+			margin: 0 49px 0 0;
+
+			@media (max-width: 515px) {
+				margin: 0;
+			}
+		}
 	}
 
 	&__title {

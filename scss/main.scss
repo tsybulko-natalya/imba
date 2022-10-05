@@ -194,7 +194,8 @@
 	&__item {
 		transition: all .4s;
 
-		&:hover {
+		&:hover,
+		&:active {
 			transform: scale(1.1);
 		}
 	}
@@ -239,7 +240,8 @@
 			margin: 30px 0 0 0;
 		}
 
-		&:hover {
+		&:hover,
+		&:active {
 			transform: scale(1.1);
 			text-decoration: underline;
 		}
@@ -546,7 +548,8 @@
 
 		transition: all .4s;
 
-		&:hover {
+		&:hover,
+		&:active {
 			transform: scale(1.1);
 		}
 

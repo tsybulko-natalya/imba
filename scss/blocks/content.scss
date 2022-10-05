@@ -1,0 +1,110 @@
+.content {
+	background: url(../images/vector5.svg) -100% top no-repeat;
+	&__tags {
+		margin: 0 0 66px 0;
+	}
+
+	&__tag {
+		display: inline-block;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 150%;
+		color: #2B2B2B;
+		background: #EDC407;
+		border-radius: 30px;
+		padding: 5px 20px;
+
+		&--green {
+			background: #59F97C;
+			margin: 0 15px 0 0;
+		}
+	}
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		font-weight: 900;
+		font-size: 50px;
+		line-height: 120%;
+		color: #FFFFFF;
+
+		margin: 0 0 30px 0;
+
+		&::before {
+			content: 'КУРС';
+			position: absolute;
+			z-index: -1;
+			top: -150%;
+
+			font-weight: 900;
+			font-size: 130px;
+			line-height: 140%;
+			letter-spacing: 0.15em;
+			color: #3E3E3C;
+			text-align: center;
+
+			@media (max-width: 541px) {
+				top: -80%;
+			}
+
+			@media (max-width: 435px) {
+				left: -15px;
+			}
+
+			@media (max-width: 390px) {
+				left: -30px;
+			}
+		}
+	}
+
+	&__subtitles {
+		margin: 0 0 104px 0;
+
+		@media (max-width: 515px) {
+			margin: 0 0 50px 0;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+		color: #FFFFFF;
+		padding: 0 0 0 22px;
+		background: url(../images/tick.svg) 0 center no-repeat;
+
+		&:not(:last-child) {
+			margin: 0 0 15px 0;
+		}
+
+		@media (max-width: 390px) {
+			max-width: 220px;
+		}
+	}
+
+	&__price {
+		margin: 0 43px 0 0;
+
+		@media (max-width: 515px) {
+			order: 2;
+		}
+
+		@media (max-width: 390px) {
+			width: 100%;
+		}
+	}
+
+	&__info {
+		@media (max-width: 515px) {
+			order: 1;
+		}
+	}
+
+	&__main-info {
+		display: flex;
+
+		@media (max-width: 640px) {
+			flex-direction: column;
+		}
+	}
+}

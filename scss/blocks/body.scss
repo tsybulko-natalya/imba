@@ -1,0 +1,14 @@
+.body {
+	&__categories {
+		padding: 160px 0 146px 0;
+
+		@media (max-width: 580px) {
+			padding: 60px 0;
+		}
+	}
+
+	&.active {
+		overflow: hidden;
+		position: fixed;
+	}
+}

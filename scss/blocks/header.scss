@@ -1,0 +1,140 @@
+.header {
+	&__main {
+		width: 100%;
+		padding: 15px 20px;
+		position: sticky;
+		background-color: #FFFFFF;
+		z-index: 4;
+		@include flex-box();
+
+		@media (max-width: 580px) {
+			padding: 13px 16px;
+		}
+	}
+
+	&__nav {
+		@include flex-box();
+		width: 100%;
+	}
+
+	&__menu-btn {
+		display: none;
+		min-width: 25px;
+		height: 16px;
+		position: relative;
+		z-index:2;
+		overflow: hidden;
+		cursor: pointer;
+
+		@media (max-width: 1570px) {
+			display: block;
+		}
+
+		span {
+			width: 25px;
+			height: 2px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #2B2B2A;
+			border-radius: 5px;
+
+			&:nth-of-type(2) {
+				top: calc(50% - 7px);
+			}
+
+			&:nth-of-type(3) {
+				top: calc(50% + 7px);
+			}
+		}
+
+		&.active {
+			height: 25px;
+		}
+
+		&.active span:nth-of-type(1) {
+			display: none;
+		}
+
+		&.active span:nth-of-type(2) {
+			top: 50%;
+			transform: translate(-50%, 0%) rotate(45deg);  
+		}
+
+		&.active span:nth-of-type(3) {
+			top: 50%;
+			transform: translate(-50%, 0%) rotate(-45deg); 
+		}
+	}
+
+	&__button {
+		font-weight: 400;
+		font-size: 16px;
+		height: 55px;
+		color: #FFFFFF;
+		min-width: 209px;
+		text-align: center;
+		background: #2B2B2A;
+		border-radius: 15px;
+		transition: all .4s;
+
+		&:hover {
+			background: #E0FF00;
+			color: #2B2B2A;
+		}
+
+		@media (max-width: 1570px) {
+			margin: 0 26px 0 0;
+		}
+
+		@media (max-width: 580px) {
+			min-width: max-content;
+			background: none;
+			font-size: 14px;
+			color: #2B2B2A;
+
+			&:hover {
+				background: none;
+			}
+
+			&:active {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__content {
+		overflow: hidden;
+		padding: 102px 0;
+		background-color: #2B2B2A;
+		background-image:
+			url(../images/vector5.svg),
+			url(../images/vector3.svg),
+			url(../images/vector1.svg),
+			url(../images/blur-line.svg),
+			url(../images/blur-desktop.svg),
+			url(../images/main-img.svg);
+		background-repeat: no-repeat;
+		background-position: 15% top, left bottom, top right, bottom right, center, right;
+
+		@media (max-width: 918px) {
+			padding: 168px 0 60px 0;
+			background-image:
+				url(../images/vector7.svg),
+				url(../images/vector6.svg),
+				url(../images/vector4.svg),
+				url(../images/vector2.svg),
+				url(../images/blur-mobile.svg),
+				url(../images/main-img-mobile.svg);
+			background-repeat: no-repeat;
+			background-position: left 728px, 80% 70%, right bottom, top right, top, top;
+			background-size: auto auto, auto auto, auto auto, auto auto, cover, cover;
+		}
+
+		@media (max-width: 581px) {
+			background-position: left 728px, 80% 368px, right bottom, top right, left -60px, top;
+			background-size: auto auto, auto auto, auto auto, auto auto, cover, contain;
+		}
+	}
+}

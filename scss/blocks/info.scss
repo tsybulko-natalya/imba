@@ -1,0 +1,43 @@
+.info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	margin: 0 0 35px 0;
+
+	@media (max-width: 640px) {
+		margin: 50px 0 0 0;
+	}
+
+	@media (max-width: 515px) {
+		margin: 0 0 79px 0;
+		gap: 13px 47px;
+	}
+
+	&__item {
+		padding: 0 0 0 15px;
+		border-left: 1px solid #E0FF00;
+		height: max-content;
+
+		&:not(:last-child) {
+			margin: 0 49px 0 0;
+
+			@media (max-width: 515px) {
+				margin: 0;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 150%;
+		color: #FFFFFF;
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 150%;
+		color: #FFFFFF;
+	}
+}
